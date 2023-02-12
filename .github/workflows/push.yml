@@ -9,12 +9,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Node, install and build project
         uses: actions/setup-node@v3
-        with:
-          node-version: 12
-        - run: npm install -g yarn
-        - run: yarn install --frozen-lockfile
-        - run: yarn build
+        with: 
+          node-version: 16
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
       - name: Running Tests    
-        - run: yarn test
+        run: yarn test
       - name: Finished  
-        - run: echo "🚀 This job's status is ${{ job.status }}."
+        run: echo "🚀 This job's status is ${{ job.status }}."
