@@ -11,10 +11,8 @@ jobs:
         uses: actions/setup-node@v3
         with: 
           node-version: 16
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+          run:  npm install -g yarn 
+                yarn install --frozen-lockfile
+                yarn build
       - name: Running Tests    
         run: yarn test
-      - name: Finished  
-        run: echo "🚀 This job's status is ${{ job.status }}."
