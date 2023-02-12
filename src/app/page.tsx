@@ -14,6 +14,9 @@ export default function Home() {
         <p className={roboto.className} style={{ fontWeight: 400 }}>
           testing deploy nextjs app on vercel with github actions.
         </p>
+        <p className={roboto.className} style={{ fontWeight: 400 }}>
+          Testing update deployment.
+        </p>
       </div>
     </main>
   );
