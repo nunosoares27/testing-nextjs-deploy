@@ -16,4 +16,5 @@ jobs:
         - run: yarn build
       - name: Running Tests    
         - run: yarn test
-      - run: echo "🚀 This job's status is ${{ job.status }}."
+      - name: Finished  
+        - run: echo "🚀 This job's status is ${{ job.status }}."
