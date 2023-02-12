@@ -7,12 +7,14 @@ jobs:
     steps:
       - name: Check out repository code 
         uses: actions/checkout@v3
-      - name: Setup Node, install and build project
+      - name: Setup Node and install yarn
         uses: actions/setup-node@v3
         with: 
           node-version: 16
           run:  npm install -g yarn 
-                yarn install --frozen-lockfile
-                yarn build
-      - name: Running Tests    
-        run: yarn test
+      - name: Install project    
+        run: yarn install --frozen-lockfile
+      - name: Build project    
+        run: yarn build
+      - name: Running Tests
+        run: yarn test      
