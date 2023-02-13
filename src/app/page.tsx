@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Roboto } from "@next/font/google";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import { Roboto } from '@next/font/google';
+import styles from './page.module.css';
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "900"] });
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '900'] });
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           testing deploy nextjs app on vercel with github actions.
         </p>
         <p className={roboto.className} style={{ fontWeight: 400 }}>
-          Testing update deployment.
+          Testing update deployment. It should work
         </p>
       </div>
     </main>
