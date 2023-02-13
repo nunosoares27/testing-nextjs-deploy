@@ -2,7 +2,7 @@ name: Deploy to Vercel Workflow
 run-name: ${{ github.actor }} is deploying to Vercel 🚀
 on: [push]
 jobs:
-  Testing:
+  Deployment:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code 
@@ -23,6 +23,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: testing-nextjs-deploy # project name in Vercel
+          vercel-args: "--confirm"
       - name: deploy site to vercel      
         uses: amondnet/vercel-action@v20
         with:
@@ -30,3 +31,4 @@ jobs:
           vercel-args: '--prod' #Optional
           vercel-org-id: ${{ secrets.ORG_ID }}  #Required
           vercel-project-id: ${{ secrets.PROJECT_ID }} #Required 
+          vercel-args: "--confirm"
