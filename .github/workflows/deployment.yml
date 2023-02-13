@@ -24,6 +24,7 @@ jobs:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: testing-nextjs-deploy # project name in Vercel
           vercel-args: "--confirm"
+          envVariableKeys: []
       - name: deploy site to vercel      
         uses: amondnet/vercel-action@v20
         with:
