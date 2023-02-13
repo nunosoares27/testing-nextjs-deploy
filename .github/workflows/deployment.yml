@@ -22,20 +22,20 @@ jobs:
         uses: dkershner6/vercel-set-env-action@v1
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
-          projectName: testing-nextjs-deploy # project name in Vercel
+          projectName: testing-nextjs-deploy
           vercel-args: "--confirm"
           envVariableKeys: ENV_VAR1,ENV_VAR2
         env:
           ENV_VAR1: myEnvVar1
-          TARGET_ENV_VAR1: production # comma delimited, one of [production, preview, development]
-          TYPE_ENV_VAR1: encrypted # one of [plain, encrypted]
+          TARGET_ENV_VAR1: production
+          TYPE_ENV_VAR1: encrypted 
           ENV_VAR2: envVar2Value
           TARGET_ENV_VAR2: preview,development
           TYPE_ENV_VAR2: plain
       - name: deploy site to vercel      
         uses: amondnet/vercel-action@v20
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          vercel-args: '--prod' #Optional
-          vercel-org-id: ${{ secrets.ORG_ID }}  #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID }} #Required 
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
