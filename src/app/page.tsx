@@ -18,7 +18,7 @@ export default function Home() {
           Testing update deployment. It should work
         </p>
         <p className={roboto.className} style={{ fontWeight: 900 }}>
-          IT'S WORKING...COMPLETE CI CD
+          IT&apos;S WORKING...COMPLETE CI CD
         </p>
       </div>
     </main>
