@@ -18,6 +18,9 @@ jobs:
         run: yarn test      
       - name: Build project    
         run: yarn build
+        env:
+          NEXT_PUBLIC_SANITY_PROJECT_ID:  ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
       - name: Set Env Vars on Vercel Project
         uses: dkershner6/vercel-set-env-action@v1
         with:
